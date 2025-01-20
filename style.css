@@ -1,0 +1,239 @@
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    }
+    body{
+        background: url(deer.jpg);
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* header start here */
+    header{
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 100px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+        
+    }
+    .logo{
+        font-size: 2.1rem;
+        font-weight: bolder;
+        color: white;
+    }
+    nav a{
+        position: relative;
+        font-size: 1.1rem;
+        text-decoration: none;
+        color: white;
+        margin-left: 40px;
+        font-weight: 500;
+    }
+    nav a::after{
+        content: '';
+        background-color: white;
+        position: absolute;
+        left: 0;
+        bottom:-6px;
+        height: 3px;
+        width: 100%;
+        border-radius: 5px;
+        transform-origin: right;
+        transform: scale(0);
+        transition: transform 0.5s;
+    }
+    nav a:hover::after{
+        transform: scale(1);
+        transform-origin: left;
+    }
+    .nav-button{
+        margin-left: 40px;
+        padding: 8px 20px;
+        font-size: 1.1rem;
+        border: 2px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        background-color: transparent;
+        outline: none;
+    }
+    .nav-button:hover{
+        background-color: white;
+        color: rgb(6, 6, 6);
+    }
+    /* header end here */
+
+    /* login section start here */
+    .container{
+        position: relative;
+        height:440px ;
+        width: 400px;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items:center ;
+        border: 2px solid rgb(233, 227, 227);
+        border-radius: 20px;
+        backdrop-filter: blur(15px);
+        overflow: hidden;
+        box-shadow:0 0 3px rgb(0, 0, 0.5) ;
+        transition: transform .5s ease ,height .2s ease;
+        transform: scale(0);
+    }
+    .container.active-button{
+        transform: scale(1);
+
+    }
+    .crose-icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        background-color: #162938;
+        font-size: 1.6rem;
+        z-index: 1;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 20px;
+        cursor: pointer;
+    }
+    .registarSection{
+        width: 100%;
+        padding: 40px;
+        /* display: none; */
+        transition: none;
+        position: absolute;
+        transform:translateX(400px) ;
+    }
+    .loginSection{
+        width: 100%;
+        padding: 40px;
+        /* display: none; */
+        transition: transform .18s ease;
+        transform: translateX(0);
+    }
+    .container.active .loginSection{
+        transition: none;
+        transform: translateX(-400px);
+    }
+    .container.active .registarSection{
+        transition: transform .18s ease;
+        transform: translateX(0);
+    }
+    .container.active{
+        height: 520px;
+    }
+    .login{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bolder;
+        color: #162938;
+    }
+    .input-box{
+        position: relative;
+        margin: 30px 0;
+        width: 100%;
+        height: 50px;
+        border-bottom: 2px solid #162938 ;
+    }
+    .input-box label{
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        font-size: 1rem;
+        color: #162938;
+        font-weight: 500;
+        pointer-events: none;
+        transition: .5s;
+    }
+    .input-box input:focus~label,
+    .input-box input:valid~label{
+        top: -5px;
+    }
+    .input-box input{
+        border: none;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        font-size: 1rem;
+        color: #162938;
+        font-weight: 600;
+        padding:0 35px 0 5px ;
+    }
+    .input-box .icon{
+        position: absolute;
+        right: 8px;
+        font-size: 1.2rem;
+        color: #162938;
+        line-height: 57px;
+    }
+    .check-box{
+        font-size: 0.9rem;
+        color: #162938;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        margin: -15px 0 15px;
+        
+    }
+    .check-box label input{
+        accent-color:#162938 ;
+        margin-right: 3px;
+    }
+    .check-box a{
+        text-decoration: none;
+        color: #162938;
+    }
+    .check-box a:hover{
+        text-decoration: underline;
+    }
+    .btn{
+        width: 100%;
+        height: 45px;
+        font-size: 1rem;
+        background-color: #162938;
+        font-weight: 500;
+        border-radius: 6px;
+        border:none  ;
+        outline: none;
+        cursor: pointer;
+        color: white;
+    }
+    .ragistation-btn{
+        text-align: center;
+        margin: 25px 0 10px ;
+        color: #162938;
+        font-size: 0.9rem;
+    }
+    .ragistation-btn p a{
+        text-decoration: none;
+        color: #14334a;
+        font-weight: 600;
+    }
+    .ragistation-btn p a:hover{
+        text-decoration: underline;
+    }
+    /* login section end here */
+
+    /* registration section start here */
+    
+
+
+    /* registration section end here */
