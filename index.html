@@ -3,116 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> project 2</title>
-    <!-- link css file -->
-    <link rel="stylesheet" href="style.css">
+    <title>portfolio 1</title>
+
     <!-- font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet">
+    <!--mobile.css-->  
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--desktop.css-->  
+    <link rel="stylesheet" type="text/css" href="desktop.css" media="screen and (min-width:992px)">
+
 
 </head>
 <body>
-    <header>
-        <h1 class="logo">Logo</h1>
-        
-        <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">contact</a>  
-                <button class="nav-button">Login</button>   
-        </nav>
-    </header>
-    <!-- Header end here -->
+  <!--navbar starts here-->
 
-    <!-- Login section start here -->
-    <div class="container">
-        <span class="crose-icon">
-            <i class="fa-solid fa-xmark"></i>
-        </span>
-
-        <div class="loginSection login ">
-            <h2 class="login">Login</h2>
-            <form action="#">
-
-                <div class="input-box">
-                    <input type="email"class="input"  required>
-                    <label for=mail"> Email</label>
-                    <span class="icon">
-                        <i class="fa-solid fa-envelope" ></i>
-                    </span>
-                </div>
-
-                <div class="input-box">
-                    <input type="password"  required maxlength="10">
-                    <label for="password" >Password</label>
-                    <span class="icon">
-                        <i class="fa-solid fa-lock" ></i>
-                    </span>
-                </div>
-
-                <div class="check-box">
-                    <label> <input type="checkbox">
-                        Remember me</label>
-                    <a href="#">Forgot password?</a>
-                </div>
-                <div class="btn">
-                    <button class="btn">Login</button>
-                </div>
-                
-                <div class="ragistation-btn">
-                    <p>Don't have an account? <a href="#"
-                        class="register-link">Register</a></p>
-                </div>
-            </form>
-        </div>
-        <!-- Login section end here -->
-
-        <!-- registration section start here -->
-        <div class="registarSection">
-            <h2 class="login">Registration</h2>
-            <form action="#">
-                
-                <div class="input-box">
-                    <input type="text"class="input"  required>
-                    <label for=mail"> Username</label>
-                    <span class="icon">
-                        <i class="fa-solid fa-user"></i>
-                    </span>
-                </div>
-
-                <div class="input-box">
-                    <input type="email"class="input"  required>
-                    <label for=mail"> Email</label>
-                    <span class="icon">
-                        <i class="fa-solid fa-envelope" ></i>
-                    </span>
-                </div>
-
-                <div class="input-box">
-                    <input type="password"  required maxlength="10">
-                    <label for="password" >Password</label>
-                    <span class="icon">
-                        <i class="fa-solid fa-lock" ></i>
-                    </span>
-                </div>
-
-                <div class="check-box">
-                    <label> <input type="checkbox">
-                        I agree to the terms & conditions</label>
-                </div>
-                <div class="btn">
-                    <button class="btn">Registar</button>
-                </div>
-                
-                <div class="ragistation-btn">
-                    <p>Already have an account? <a href="#"
-                        class="login-link">Login</a></p>
-                </div>
-            </form>
-        </div>
+    <div class="navbar" id="home">
+      <div class="nav-image col-2">
+      <img src="1741948647799.jpg" alt=""> 
+      </div>
+      <div class="nav-h col-4">
+      <h1>Saikat Ahmed</h1>
+      </div>
+      <div class="nav-manu col-6">
+      <a href="#home">HOME</a> 
+      <a href="#about-me">ABOUT ME</a>
+      <a href="#skill-id">SKILL</a>
+      <a href="#contect-id">CONTACT ME</a>
+      </div>
     </div>
-    <!-- registration section end here -->
+    <!--navbar ends here-->
 
-    <script src="script.js"></script>
+
+    <!-- profile starts from here -->
+    <div class="profile">
+      <img class="weather-icon " src="weather-icon.png" alt="weather icon">
+      <div class="profile-desc">
+        <h1>I am a Computer Student<br>&<br>Web Developer</h1>
+        <P>HI! My name is Saikat Ahmed. Welcome to my personal page that I've design to showcase my skills and expertise that I've accutulated over the year</P>
+      </div>
+      <img class="weather-icon2 " src="weather-icon.png" alt="weather icon">
+    </div>
+    <!-- profile ends from here -->
+
+
+    <!-- About me starts here -->
+     <div class="about-me" id="about-me">
+      <h2>ABOUT ME</h2>
+      <hr class="dorter-hr">
+      <div class="aboutme-image col-6">
+        <img src="1741948647799.jpg" alt="">
+      </div>
+      <div class="aboutme-desc col-6">
+        <P>I like to call myself a passionate computer science student & web developer</P>
+        <P>I made lot of video on different subject. My first priority is making the subject more interesting and give you a clean understanding so you can feel it and don't get bore</P>      
+       
+      <hr class="aboutme-hr">
+      <P>Name: Saikat Ahamed</P>
+      <hr class="aboutme-hr">
+      <P>Address: Chandpur, Bangladesh</P>
+      <hr class="aboutme-hr">
+      <P>Email: <a href="saikatmojumder678@gmail.com">saikatmojumder678@gmail.com</a></P>
+      <hr class="aboutme-hr">
+      <P>Phone: <a href="tel:+8801403117742">+8801403117742</a></P>
+      <hr class="aboutme-hr">
+      <P>Website: <a href="" target="blank">www.studywithsaikat.com</a></P>
+      <hr class="aboutme-hr">
+      <P>
+        <a href="" target="blank">
+          <button class="cv-button">Download cv</button>
+        </a>
+      </P>
+    </div>
+     </div>
+    <!-- About me ends here -->
+
+
+
+    <!-- professional experience starts here -->
+     <div class="professional-expreience">
+      <div class="work-expreience col-4">
+      <div class="card">
+        <div class="card-icon">
+          <img class="round-img"src="briefcase.png" alt="">          
+        </div>
+        <div class="card-title">
+          <h2>WORK EXPERIENCE</h2>
+        </div>
+       <div class="card-desc">
+        <ol>
+          <li>
+          <strong>Lecturer of information & Communication Technology </strong>    
+          01/05/2010-01/08/2017<br>
+          Al Amin Academy School And College<br>
+          Chandpur sadar Chandpur (Bangladesh)
+          </li>
+          <hr>
+          <li>
+          <strong>Lecturer of CSE Depatment</strong>  
+          10/11/2017-05/04/2018<br>
+          Farakkabad Degree College<br>
+          Chandpur sadar Chandpur (Bangladesh)
+          </li>
+          <hr>
+          <li>
+          <strong>Lecturer of information & Communication Tecnology</strong>
+          01/07/2018-11/11/2018<br>
+          Al Amin Academy<br>
+          Foridgonj Chandpur Bangladesh
+          </li>
+          <hr>
+          <li>
+           <strong>Lecturer of CSE Depatment</strong>  
+           10/11/2017-05/04/2018<br>
+           Farakkabad Degree College<br>
+          Chandpur sadar Chandpur (Bangladesh)
+          </li>
+        </ol>
+       </div>
+      </div>        
+      </div>
+      
+
+      <div class="education col-4">
+        <div class="card">
+          <div class="card-icon">
+            <img class="round-img"src="video-conference.png" alt="">          
+          </div>
+          <div class="card-title">
+            <h2>EDUCATION AND TRAINING</h2>
+          </div>
+         <div class="card-desc">
+          <ol>
+            <li>
+            <strong>Lecturer of information & Communication Technology </strong>    
+            01/05/2010-01/08/2017<br>
+            Al Amin Academy School And College<br>
+            Chandpur sadar Chandpur (Bangladesh)
+            </li>
+            <hr>
+            <li>
+            <strong>Lecturer of CSE Depatment</strong>  
+            10/11/2017-05/04/2018<br>
+            Farakkabad Degree College<br>
+            Chandpur sadar Chandpur (Bangladesh)
+            </li>
+            <hr>
+            <li>
+            <strong>Lecturer of information & Communication Tecnology</strong>
+            01/07/2018-11/11/2018<br>
+            Al Amin Academy<br>
+            Foridgonj Chandpur Bangladesh
+            </li>
+            <hr>
+            <li>
+             <strong>Lecturer of CSE Depatment</strong>  
+             10/11/2017-05/04/2018<br>
+             Farakkabad Degree College<br>
+            Chandpur sadar Chandpur (Bangladesh)
+            </li>
+          </ol>
+         </div>
+        </div>        
+      </div>
+
+
+      <div class="skill col-4" id="skill-id">
+        <div class="card">
+          <div class="card-icon">
+            <img class="round-img"src="online.png" alt="">          
+          </div>
+          <div class="card-title"> 
+            <h2>SKILLS</h2>
+          </div>
+         <div class="card-desc">
+           <ul>
+           <li class="html">HTML</li>
+           <li class="css"> CSS </li>
+           <li class="java">JAVA</li>
+  
+           <li class="github">GITHUB</li>
+           <li class="nodejs">NODE.JS</li>
+           <li class="paython">PAYTHON</li>
+           <li class="javascript">JAVA SCRIPT</li>
+          
+           </ul>
+         </div>  
+        </div>       
+      </div>
+     </div>
+
+    <!-- professional experience ends here -->
+    
+    <!-- Achievements contect start here -->
+
+
+    <div class="achievements-contect">
+    <div class="achievement col-4">
+    <h2>ACHIEVEMENTS</h2>
+    <hr class="dorter-hr">
+
+    <ol>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, voluptatem .</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, voluptatem he is very good.</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, voluptatem I hope you are well by the grece of Allah.</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, voluptatem.</li>
+
+    </ol>
+    </div>
+
+    <div class="contect col-4" id="contect-id">
+      <h2>CONTECT ME</h2>
+      <hr class="dorter-hr">
+      <form action="mailto:saikatmojumder678@gmail.com" method="post" enctype="text/plain">
+      <p> <input type="text" placeholder="Your Name" name="name"> </p>
+      <p> <input type="email" placeholder="Your Email" name="email"> </p>
+      <textarea name="messege" id="" cols="30" rows="10" placeholder="Your Messege Here"></textarea>
+      <button type="submit">SEND</button>
+      <button type="reset">RESET</button>
+      </form>
+    </div>
+
+
+    <div class="contect-link col-4">
+      <h2>More ways to Contact</h2>
+      <hr class="dorter-hr">
+
+    <div class="media-btn">
+
+      <button class="btn" onclick="window.open('https://www.youtube.com/@anisul-islam')" class="request-callback"><i class="fa fa-youtube-play" aria-hidden="true" style="color:#c4302b"></i></button>
+      <button class="btn" onclick="window.open('https://www.youtube.com/@anisul-islam')" class="request-callback"><i class="fa fa-facebook" aria-hidden="true" style="color:#064d8c"></i></button>
+      <button class="btn" onclick="window.open('https://www.youtube.com/@anisul-islam')" class="request-callback"><i class="fa fa-internet-explorer" aria-hidden="true" style="color:#183e5f"></i></button>
+      <button class="btn" onclick="window.open('https://www.youtube.com/@anisul-islam')" class="request-callback"><i class="fa fa-skype" aria-hidden="true" style="color:#0860ad"></i></button>
+      <button class="btn" onclick="window.open('https://www.youtube.com/@anisul-islam')" class="request-callback"><i class="fa fa-linkedin" aria-hidden="true" style="color:#3392e5"></i></button>
+      <button class="btn" onclick="window.open('https://www.youtube.com/@anisul-islam')" class="request-callback"><i class="fa fa-github" aria-hidden="true" style="color:black"></i></button>
+      
+    </div>   
+    </div>
+    </div>
+
+    <!-- Achievements contect end here -->
+
+    <!-- Footer starts from here -->
+    
+    <div class="footer">
+    <div class="footer-menu col-6">
+      <a href="#home">HOME</a> 
+      <a href="#about-me">ABOUT ME</a>
+      <a href="#skill-id">SKILL</a>
+      <a href="#contect-id">CONTACT ME</a>
+
+
+    </div>
+    <div class="footer-desc col-6">
+
+    &copy; Saikat 2024. Deleloper with <span style="color:red; font-size: 1.5rem;">♥</span> by saikat.
+
+    </div>
+    </div>
+
+    <!-- Footer ends from here -->
 </body>
 </html>

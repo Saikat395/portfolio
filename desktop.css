@@ -1,0 +1,112 @@
+/*for desktop*/
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width:91.66%;}
+.col-12{width:100%;}
+
+.nav-image{
+    text-align:left;
+}
+.nav-h{
+   text-align:right; 
+}
+.nav-manu{
+    flex-direction: row;
+    justify-content: flex-end;
+  
+}
+.nav-manu a{
+    padding:5px 10px;
+    margin:20px 0;
+    background-color: transparent;
+    
+}
+
+/*navbae ends here*/
+
+/* profile design starts from here */
+.profile .weather-icon{
+    right:100px;   
+    transition:width 2s transform 2s;
+}
+.profile .weather-icon:hover{
+    width:140px;
+}
+.profile .weather-icon2{
+    bottom:20px;
+    left:140px;   
+    transition:width 2s transform 2s;
+}
+.profile .weather-icon2:hover{
+    width:140px;
+}
+.profile-desc p{
+    color:gray;
+    margin:0 auto ;
+    text-align :center;
+    bottom:20px;
+}
+
+
+/* profile design ends from here */
+
+
+/* About me design starts here */
+
+.aboutme-image{
+    margin-top:80px;
+}
+.aboutme-image img{   
+    width:200px;
+}
+.aboutme-desc p{
+    text-align: left;
+}
+
+/* About me design ends here */
+
+
+/* professional experience starts here */
+.professional-expreience{
+    padding:1% 5%;
+}
+
+/* professional experience Ends here */
+
+
+/* Achievements contect start here */
+.achievement{
+    padding-right: 50px;
+}
+.contect-link{
+    position: relative;
+}
+.media-btn{
+    position: absolute;
+    margin-top: 200px;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Achievements contect end here */
+
+
+/* Footer starts from here */
+.footer-menu{
+    margin-top: 12px;
+}
+.footer-menu a{
+    display:inline;
+    padding:10px;
+}
+
+/* Footer ends from here */   

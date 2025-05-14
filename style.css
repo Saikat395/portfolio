@@ -1,239 +1,458 @@
-   *{
-    margin: 0;
-    padding: 0;
+*{
     box-sizing: border-box;
-    outline: 0;
-    }
-    body{
-        background: url(deer.jpg);
-        display: flex;
-        
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-size: cover;
-        background-position: center;
-    }
+    font-family: "Fira Sans", sans-serif;
+}
+.navbar{
+ 
+ background-color:rgb(39, 153, 153);
+ text-align: center;
+ padding:1% 
+}
+a{
+    text-decoration: none;
+    font-size:1.2rem;
+    color:white;
 
-    /* header start here */
-    header{
-        position: fixed;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 100px;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 99;
-        
-    }
-    .logo{
-        font-size: 2.1rem;
-        font-weight: bolder;
-        color: white;
-    }
-    nav a{
-        position: relative;
-        font-size: 1.1rem;
-        text-decoration: none;
-        color: white;
-        margin-left: 40px;
-        font-weight: 500;
-    }
-    nav a::after{
-        content: '';
-        background-color: white;
-        position: absolute;
-        left: 0;
-        bottom:-6px;
-        height: 3px;
-        width: 100%;
-        border-radius: 5px;
-        transform-origin: right;
-        transform: scale(0);
-        transition: transform 0.5s;
-    }
-    nav a:hover::after{
-        transform: scale(1);
-        transform-origin: left;
-    }
-    .nav-button{
-        margin-left: 40px;
-        padding: 8px 20px;
-        font-size: 1.1rem;
-        border: 2px solid white;
-        border-radius: 5px;
-        cursor: pointer;
-        color: white;
-        background-color: transparent;
-        outline: none;
-    }
-    .nav-button:hover{
-        background-color: white;
-        color: rgb(6, 6, 6);
-    }
-    /* header end here */
+}
+hr{
+  
+  border:1px solid rgb(255, 255, 255);
+}
+h1{
+    font-size:2.3rem;
+    text-align:center;
+}
+h2{
+    font-size:1.5rem ;
+    text-align: center;
+}
 
-    /* login section start here */
-    .container{
-        position: relative;
-        height:440px ;
-        width: 400px;
-        background: transparent;
-        display: flex;
-        justify-content: center;
-        align-items:center ;
-        border: 2px solid rgb(233, 227, 227);
-        border-radius: 20px;
-        backdrop-filter: blur(15px);
-        overflow: hidden;
-        box-shadow:0 0 3px rgb(0, 0, 0.5) ;
-        transition: transform .5s ease ,height .2s ease;
-        transform: scale(0);
-    }
-    .container.active-button{
-        transform: scale(1);
-
-    }
-    .crose-icon{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 45px;
-        height: 45px;
-        background-color: #162938;
-        font-size: 1.6rem;
-        z-index: 1;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom-left-radius: 20px;
-        cursor: pointer;
-    }
-    .registarSection{
-        width: 100%;
-        padding: 40px;
-        /* display: none; */
-        transition: none;
-        position: absolute;
-        transform:translateX(400px) ;
-    }
-    .loginSection{
-        width: 100%;
-        padding: 40px;
-        /* display: none; */
-        transition: transform .18s ease;
-        transform: translateX(0);
-    }
-    .container.active .loginSection{
-        transition: none;
-        transform: translateX(-400px);
-    }
-    .container.active .registarSection{
-        transition: transform .18s ease;
-        transform: translateX(0);
-    }
-    .container.active{
-        height: 520px;
-    }
-    .login{
-        text-align: center;
-        font-size: 2rem;
-        font-weight: bolder;
-        color: #162938;
-    }
-    .input-box{
-        position: relative;
-        margin: 30px 0;
-        width: 100%;
-        height: 50px;
-        border-bottom: 2px solid #162938 ;
-    }
-    .input-box label{
-        position: absolute;
-        top: 50%;
-        left: 5px;
-        transform: translateY(-50%);
-        font-size: 1rem;
-        color: #162938;
-        font-weight: 500;
-        pointer-events: none;
-        transition: .5s;
-    }
-    .input-box input:focus~label,
-    .input-box input:valid~label{
-        top: -5px;
-    }
-    .input-box input{
-        border: none;
-        background: transparent;
-        width: 100%;
-        height: 100%;
-        outline: none;
-        font-size: 1rem;
-        color: #162938;
-        font-weight: 600;
-        padding:0 35px 0 5px ;
-    }
-    .input-box .icon{
-        position: absolute;
-        right: 8px;
-        font-size: 1.2rem;
-        color: #162938;
-        line-height: 57px;
-    }
-    .check-box{
-        font-size: 0.9rem;
-        color: #162938;
-        font-weight: 500;
-        display: flex;
-        justify-content: space-between;
-        margin: -15px 0 15px;
-        
-    }
-    .check-box label input{
-        accent-color:#162938 ;
-        margin-right: 3px;
-    }
-    .check-box a{
-        text-decoration: none;
-        color: #162938;
-    }
-    .check-box a:hover{
-        text-decoration: underline;
-    }
-    .btn{
-        width: 100%;
-        height: 45px;
-        font-size: 1rem;
-        background-color: #162938;
-        font-weight: 500;
-        border-radius: 6px;
-        border:none  ;
-        outline: none;
-        cursor: pointer;
-        color: white;
-    }
-    .ragistation-btn{
-        text-align: center;
-        margin: 25px 0 10px ;
-        color: #162938;
-        font-size: 0.9rem;
-    }
-    .ragistation-btn p a{
-        text-decoration: none;
-        color: #14334a;
-        font-weight: 600;
-    }
-    .ragistation-btn p a:hover{
-        text-decoration: underline;
-    }
-    /* login section end here */
-
-    /* registration section start here */
+.dorter-hr{
+    border:dotted 6px white;
+    border-bottom: none;
+    margin:20px auto;
+    width:70px;
+}
+.nav-image img{
+   width:60px;
+   border-radius: 100px; 
+}
+.nav-h h1{ 
+   color:white; 
+   margin:0;
+   padding-top:10px;
+}
+.nav-manu a{
     
+    background-color:rgb(23, 92, 92);
+    border-radius: 10px;
+    margin:7px 0;
+    padding:10px;
+}
+.nav-manu a:hover{
+    background-color:gray;
+}
+[class*="col-"]{
+    float:left;
+    padding:10px;
+}
+[class*="col-"]{
+    width:100%;
+}
+.navbar::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+.nav-manu{
+    display:flex;
+    flex-direction: column;
+}
+/*navbae ends here*/
+
+/* profile design starts from here */
+.profile{
+    padding:120px 10px ;
+    position:relative;
+    text-align: center;
+}
+
+.profile .weather-icon{
+    position: absolute;
+    width:120px;
+    right:60px;
+    top:30px;  
+    transition: transform 2s;
+}
+.profile .weather-icon:hover{
+transform: rotate(360deg);
+}
+.profile-desc h1{
+    font-family: 'Satisfy','cursive';
+    font-size:3rem;
+}
+.profile-desc p{
+    color:gray;
+    margin:0 auto 20px auto;
+    text-align :center;
+    width:90%;
+}
+.profile .weather-icon2{
+    position: absolute;
+    width:120px;
+    left:60px;
+    bottom:10px;  
+    transition: transform 2s;
+}
+.profile .weather-icon2:hover{
+    transform: rotate(360deg);
+}
+.profile::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+/* profile design starts ends here */
+
+/* About me design  starts here */
+
+.about-me{
+    background-color:rgb(39, 153, 153);
+    padding:1% 7%;
+    color:white;
+    text-align :center;
+    font-family: 'Montserrat', 'sans-serif';
+}
+.aboutme-image img{
+    border:5px solid white;
+    width:150px;
+    border-radius: 50%;
+}
+.about-me p{
+    text-align: center;
+    
+}
+.about-me a{
+    font-size: 1.2rem;
+    
+}
+.cv-button{
+    background-color: #052d2f;
+    color:white;
+    border:none;
+    padding:10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin:10px;
+}
+.about-me::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+/* About me design  ends here */
+
+/* professional experience starts here */
+.professional-expreience{
+    padding:1% 0;
+}
+.professional-expreience .card{
+    background-color:gray;
+    height: 700px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 5px black;
+}
+.card-icon{
+    text-align:center;
+}
+.card-icon img {
+    width:100px;
+    margin-top: 20px;
+}
+.card-icon .round-img{
+    border:5px solid white;
+    border-radius: 100px;
+    padding:15px;
+}
+.card-title h2{
+    background-color: rgb(54, 52, 52);
+    color:white;   
+    text-align: center;
+    padding:10px;
+}
+
+.work-expreience::after{
+    content:'';
+    display:table;
+    clear:both;
+}
 
 
-    /* registration section end here */
+/* card2 start */
+
+.professional-expreience{
+    padding:1% 0;
+}
+.professional-expreience .card{
+    background-color:gray;
+    height: 700px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 5px black;
+}
+.card-icon{
+    text-align:center;
+}
+.card-icon img {
+    width:100px;
+    margin-top: 20px;
+}
+.card-icon .round-img{
+    border:5px solid white;
+    border-radius: 100px;
+    padding:15px;
+}
+.card-title h2{
+    background-color: rgb(54, 52, 52);
+    color:white;  
+    text-align: center;
+    padding:10px;
+}
+.education::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+/* card3 start */
+
+.professional-expreience{
+    padding:1% 0;
+}
+.professional-expreience .card{
+    background-color:gray;
+    height: 700px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 5px black;
+}
+.card-icon{
+    text-align:center;
+}
+.card-icon img {
+    width:100px;
+    margin-top: 20px;
+}
+.card-icon .round-img{
+    border:5px solid white;
+    border-radius: 100px;
+    padding:15px;
+}
+.card-title h2{
+    background-color: rgb(54, 52, 52);
+    color:white;  
+    text-align: center;
+    padding:10px;
+}
+.skill li{
+    list-style: none;
+    font-weight: bolder;
+    margin: 40px 10px;
+    position: relative;
+}
+.skill li::before{
+    content: '';
+    position: absolute;
+    top:calc(100% + 5px);
+    left:0;
+    width:100%;
+    height:10px;
+    background-color: rgb(86, 86, 153,.5);
+    border-radius: 100px;
+}
+
+.skill li::after{
+    content: '';
+    position: absolute;
+    top:calc(100% + 5px);
+    left:0;
+    width:0 ;
+    height:10px;
+    background-color: rgb(86, 86, 153,1);
+    border-radius: 100px;
+
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.skill li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+    to {
+        width: 90%;
+    }
+}
+.skill li.css::after{
+    animation-name:css;
+}
+@keyframes css{
+    to {
+        width: 80%;
+    }
+}
+.skill li.java::after{
+    animation-name: java;
+}
+@keyframes java{
+    to {
+        width: 60%;
+    }
+}
+.skill li.github::after{
+    animation-name: github;
+}
+
+@keyframes github{
+    to {
+        width: 70%;
+    }
+}
+.skill li.nodejs::after{
+    animation-name: nodejs;
+}
+@keyframes nodejs{
+    to {
+        width: 60%;
+    }
+}
+.skill li.paython::after{
+    animation-name: paython;
+}
+@keyframes paython{
+    to {
+        width: 80%;
+    }
+}
+.skill li.javascript::after{
+    animation-name: javascript;
+}
+@keyframes javascript{
+    to {
+        width: 90%;
+    }
+}
+.professional-expreience::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+
+/* professional experience ends here */
+
+/* Achievements contect start here */
+.achievements-contect{
+    padding:1% 7%;
+    background-color:rgb(39, 153, 153) ;
+    color: white;
+    width: 100%;   
+}
+
+.achievement li{
+    padding:10px;
+}
+.contect{
+    text-align: center;
+}
+.contect input, textarea{
+    width: 100%;
+    padding:10px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+.contect button{
+    border: none;
+    border-radius: 12px;
+    background-color:#052d2f ;
+    color:white;
+    cursor: pointer;
+    padding:15px;
+    margin: 10px;
+    width:100px ;
+}
+
+.contect-link {
+    text-align: center;
+}
+.achievements-contect::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+.media-btn .btn{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding:5px;
+    margin:10px;
+    width:50px;
+    background-color: white;
+
+}
+.btn:hover{
+    background-color: gray;
+}
+.achievements-contect::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+
+/* Achievements contect end here */
+
+/* Footer starts from here */
+.footer{
+    background-color: black;
+    color:white;
+    padding:20px;
+    text-align: center;
+    font-size: 0.8rem;
+
+}
+.footer-menu a{
+    display: block;
+    margin:15px 0;
+    font-size: 1rem;
+}
+.footer-menu a:hover{
+    color:gray;
+}
+
+
+.footer::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+
+/* Footer ends from here */
